@@ -1,0 +1,17 @@
+domain: sosomasox.com
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+projectName: example-controller
+repo: github.com/sosomasox/example-controller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: sosomasox.com
+  group: example
+  kind: Hoge
+  path: github.com/sosomasox/example-controller/apis/example/v1alpha1
+  version: v1alpha1
+version: "3"

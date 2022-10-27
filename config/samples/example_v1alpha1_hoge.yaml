@@ -1,0 +1,12 @@
+apiVersion: example.sosomasox.com/v1alpha1
+kind: Hoge
+metadata:
+  labels:
+    app.kubernetes.io/name: hoge
+    app.kubernetes.io/instance: hoge-sample
+    app.kubernetes.io/part-of: example-controller
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: example-controller
+  name: hoge-sample
+spec:
+  # TODO(user): Add fields here

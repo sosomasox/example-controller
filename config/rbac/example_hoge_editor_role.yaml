@@ -1,0 +1,31 @@
+# permissions for end users to edit hoges.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: hoge-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: example-controller
+    app.kubernetes.io/part-of: example-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: hoge-editor-role
+rules:
+- apiGroups:
+  - example.sosomasox.com
+  resources:
+  - hoges
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - example.sosomasox.com
+  resources:
+  - hoges/status
+  verbs:
+  - get
